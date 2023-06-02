@@ -108,6 +108,8 @@ void UnionArrayMap(int arr1[], int arr2[], int m, int n){
 
 
 //by merging with duplicate handling
+//tc 0(m+n)
+//sc 0(1)
 void next_distinct(const vector<int> &arr, int &x){
     do{
         ++x;
@@ -144,14 +146,60 @@ void printUnion(vector<int> arr1, vector<int> arr2)
     }
 }
 
+// int main()
+// {
+//     int arr1[] = { 1, 2,2,2,2,2, 4, 5, 6,6,6 };
+//     int arr2[] = { 2, 3, 5, 7 };
+//     int m = sizeof(arr1) / sizeof(arr1[0]);
+//     int n = sizeof(arr2) / sizeof(arr2[0]);
+//     UnionArrayMap(arr1, arr2, m, n);
+//     return 0;
+// }
+
+
+
+//intersection
+
+
+//by merge approach
+// 1) Use two index variables i and j, initial values i = 0, j = 0 
+// 2) If arr1[i] is smaller than arr2[j] then increment i. 
+// 3) If arr1[i] is greater than arr2[j] then increment j. 
+// 4) If both are same then print any of them and increment both i and j.
+//tc 0(m+n)
+//sc 0(1)
+void printIntersection(int arr1[], int arr2[], int m, int n)
+{
+   int i=0,j=0;
+   while(i<m&&j<n){
+    if(arr1[i]<arr2[j]){
+        i++;
+    }else if(arr2[j]<arr1[i]){
+        j++;
+    }else{
+        cout<<arr2[j]<<" ";
+        i++;
+        j++;
+    }
+   }
+}
+//to handle duplicates
+//make a set and then insert the element in the set rather than printing in the else condition and then print the entire set.
+// or just add these lines
+//if (i > 0 && arr1[i] == arr1[i - 1]) {        //For Handling duplicates
+//           i++;
+//           continue;
+//       }
+
+
 
 
 int main()
 {
-    int arr1[] = { 1, 2,2,2,2,2, 4, 5, 6,6,6 };
+    int arr1[] = { 1, 2, 4, 5, 6 };
     int arr2[] = { 2, 3, 5, 7 };
     int m = sizeof(arr1) / sizeof(arr1[0]);
     int n = sizeof(arr2) / sizeof(arr2[0]);
-    UnionArrayMap(arr1, arr2, m, n);
+    printIntersection(arr1, arr2, m, n);
     return 0;
 }
