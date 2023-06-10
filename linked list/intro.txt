@@ -1,0 +1,26 @@
+LINKED LIST INTRODUCTION
+-linear data structure
+-nodes stored in non contiguous memory locations
+-nodes connecter using pointers
+-a node contains a data field and pointer to / address of the next node (singly linked ll)
+
+NEED / ADVANTAGES
+-dynamic - the memory can be allocated and deallocated at run time according to the type of operation
+-easy insertion and deletion (no shifting like in arrays) (only address updations)
+-efficient memory allocation
+-many data structures can be implemented (stack,queue,graph,hashmap etc.)
+
+DISADVANTAGES
+-random access (no direct access using index) (need to traverse) (costly search operation)
+-extra memory to store pointers
+
+TYPES
+-single linked list (next pointer)
+-double linked list (next and prev pointer)
+-circular linked list (last node connected to first)
+
+REAL WORLD APPLICATIONS
+-music player (prev and next songs)
+-web browser (prev and next web pages)
+-image viewer
+-places where data is stored in an alphabetical order 
