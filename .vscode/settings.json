@@ -3,6 +3,8 @@
     "files.associations": {
         "*.ejs": "html",
         "map": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp"
     }
 }
