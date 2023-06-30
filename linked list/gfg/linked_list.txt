@@ -24,3 +24,11 @@ REAL WORLD APPLICATIONS
 -web browser (prev and next web pages)
 -image viewer
 -places where data is stored in an alphabetical order
+
+APPLICATIONS
+-worst case insertion in the end and start are constant if we maintain a head and tail pointer.
+-worst case deletion from the start is also constant (from end is not constant)
+-better memory management
+-better round robin algorithm implementation
+-more efficient merge 2 sorted linked list
+-easier queue and dequeue implementation

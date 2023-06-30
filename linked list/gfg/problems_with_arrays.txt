@@ -1,0 +1,11 @@
+int arr[100]; -- simple array in stack memory -- goes out of the scope when the function in over
+int *arr=new int[100]; -- dynamically allocated array on heap memory -- does not goes out of the scope as it is stored in heap memory when function gets over
+vector<int> arr; -- dynamically allocated. when it gets filled it doubles its size
+
+
+PROBLEMS
+-- either size is fixed or pre allocated
+-- worst case tc while insertion at the end can be 0(n) (generally 0(1)). (when the preallocated space gets filled in dynamically sized array they have to double their size and then copy all the elements from the smaller array to the new array)
+-- insertion/deletion in the middle/beginning is costly
+-- efficient implementation of queue and dequeue is complex
+-- in some questions we need to create temp/auxilary array increasing the space complexity
