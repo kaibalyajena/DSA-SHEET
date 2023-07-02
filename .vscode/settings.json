@@ -5,6 +5,7 @@
         "map": "cpp",
         "ostream": "cpp",
         "complex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "iostream": "cpp"
     }
 }
