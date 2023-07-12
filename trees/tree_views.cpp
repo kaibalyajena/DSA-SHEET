@@ -145,6 +145,65 @@ public:
     }
 };
 
+void printLeftView(node* root,vector<int>& ans,int level){
+    if(root==nullptr){
+        return;
+    }
+    if(level==ans.size()){
+        ans.push_back(root->data);
+    }
+    printLeftView(root->left,ans,level+1);
+    printLeftView(root->right,ans,level+1);
+}
+
+void boundryTraversal(node* root){
+    if(!root){
+        return;
+    }
+    cout<<root->data<<" ";
+    printLeftNodes(root->left);
+    printLeafNodes(root);
+    printRightNodes(root->right);
+}
+void printLeftNodes(node* root){
+    if(root==nullptr){
+        return;
+    }
+    if(root->left==nullptr&&root->right==nullptr){
+        return;
+    }
+    cout<<root->data<<" ";
+    if(root->left){
+        printLeftNodes(root->left);
+    }else{
+        printLeftNodes(root->right);
+    }
+}
+void printLeafNodes(node* root){
+    if(root==nullptr){
+        return;
+    }
+    if(root->left==nullptr&&root->right==nullptr){
+        cout<<root->data<<" ";
+    }
+    printLeafNodes(root->left);
+    printLeafNodes(root->right);
+}
+printRightNodes(node* root){
+    if(!root){
+        return;
+    }
+    if(root->left==nullptr&&root->right==nullptr){
+        return;
+    }
+    if(root->right){
+        printRightNodes(root->right);
+    }else{
+        printRightNodes(root->left);
+    }
+    cout<<root->data<<" ";
+}
+
 int main(){
     node* root=buildTree();
     inorder(root);
