@@ -1,0 +1,25 @@
+GRAPH
+- vertices + edges
+- represent and analyze complex relationships between entities
+
+
+TYPES OF GRAPHS
+- null graph -- no edges
+- trivial graph -- single vertex
+- directed graph
+- undirected graph
+- connected graph -- all nodes reachable from all nodes
+- disconnected graph
+- regular graph -- degree of each vertex is k
+- complete graph -- each node connected to each node
+- cycle graph -- the graph is a cycle (degree of each vertex is 2)
+- cyclic graph -- graph has atleast one cycle
+- directed graph
+- weighted graph
+- bipartite graph -- graph is 2 colorable -- does not have odd length cycles -- vertices can be divided into two disjoint and independent sets u and v such that every edge connects a vertex in u to a vertex in v
+
+
+REPRESENTATION
+- adjacency matrix -- if edge exists between i and j then a[i][j]=1 and a[j][i]=1 and if no edge then 0. adding and removing edge is constant but initializing is v^2
+- adjacency list -- an array of lists of connected vertices. (0->1->2  0 had edges with 1 and 2). adding edges is constant, removing edge and initializing is linear.
+- incidence matrix

@@ -28,7 +28,6 @@ node* buildTree(){
     cout<<"node right of node with value "<<val<<endl;
     root->right=buildTree();
     return root;
-
 }
 
 void inorder(node* root){
