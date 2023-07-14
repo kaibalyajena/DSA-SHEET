@@ -23,3 +23,7 @@ REPRESENTATION
 - adjacency matrix -- if edge exists between i and j then a[i][j]=1 and a[j][i]=1 and if no edge then 0. adding and removing edge is constant but initializing is v^2
 - adjacency list -- an array of lists of connected vertices. (0->1->2  0 had edges with 1 and 2). adding edges is constant, removing edge and initializing is linear.
 - incidence matrix
+
+
+- The eccentricity of a Vertex: Maximum distance from a vertex to all other vertices is considered as the Eccentricity of that vertex.
+- Radius of a Connected Graph: The minimum value of eccentricity from all vertices is basically considered as the radius of connected graph.
