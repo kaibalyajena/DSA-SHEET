@@ -11,6 +11,8 @@ void dfsRec(vector<int> adj[],int s,vector<bool> &visited){
     }
 }
 
+//sc -- 0(N)
+//tc -- 0(v+2e)
 void dfs(vector<int> adj[],int vertices){
     vector<bool> visited;
     visited.resize(vertices,false);
