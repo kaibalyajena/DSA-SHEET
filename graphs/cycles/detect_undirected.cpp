@@ -41,6 +41,7 @@ class Solution {
 
 
 //using dfs
+//if we visit an already visited adjacent node which is not parent then the cycle is detected
 class Solution {
   public:
     bool dfs(int s,int parent,vector<int> adj[],vector<int> &visited){
