@@ -39,3 +39,52 @@ public:
         return safeNodes;
     }
 };
+
+
+
+
+
+
+
+
+//using topological sort
+//topo sort works on the concept of indegree and start with nodes with indegree 0 but safe terminal nodes have outdegree of 0.
+//so we need to first reverse the edges and and do topo sort and in the end the elements in array would be the safe nodes and we must sort them if asked in the problem 
+class Solution {
+public:
+    vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
+        int v=graph.size();
+        vector<vector<int>> adj(v);
+        for(int i=0;i<v;i++){
+            for(auto adjacent:graph[i]){
+                adj[adjacent].push_back(i);
+            }
+        }
+        vector<int> indegree(v,0);
+        queue<int> q;
+        vector<int> topo;
+        for(int i=0;i<v;i++){
+            for(auto adjacent:adj[i]){
+                indegree[adjacent]++;
+            }
+        }
+        for(int i=0;i<v;i++){
+            if(indegree[i]==0){
+                q.push(i);
+            }
+        }
+        while(!q.empty()){
+            int node=q.front();
+            q.pop();
+            topo.push_back(node);
+            for(auto adjacent:adj[node]){
+                indegree[adjacent]--;
+                if(indegree[adjacent]==0){
+                    q.push(adjacent);
+                }
+            }
+        }
+        sort(topo.begin(),topo.end());
+        return topo;
+    }
+};
