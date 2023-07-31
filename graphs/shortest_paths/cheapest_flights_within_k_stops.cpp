@@ -3,6 +3,7 @@
 //and that this is main criteria of selecting the next front element 
 //so as it is already being added to the queue in a sorted order 
 //so no need for a priority queue to sort them on the basis of stops saving us time
+// tc=E (flights.size())
 class Solution {
 public:
     int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
