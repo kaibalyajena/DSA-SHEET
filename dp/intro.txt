@@ -1,0 +1,13 @@
+methods
+
+memoization -- top down approach -- tend to store the value of subproblems in map/arrays/table.
+tabulation -- bottom up approach -- base case to the required ans
+
+
+- used when overlapping subproblems is present.
+
+
+- recursion to memoization -- (declare the dp array, check if solution is stored if stored then return , while returning also store in the dp array)
+
+
+-- recusion -- all possible ways -- count , give the best / worst

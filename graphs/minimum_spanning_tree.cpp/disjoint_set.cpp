@@ -2,6 +2,7 @@
 //find 
 //union by rank and union by size
 //union and find operations take time 4alpha which is costant time
+//used whenever we dynamically change the graph
 #include<iostream>
 using namespace std;
 
